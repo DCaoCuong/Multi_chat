@@ -1,0 +1,54 @@
+Multi-Chat Application
+A real-time chat application built with Spring Boot and WebSocket that resembles Facebook Messenger functionality.
+
+Overview
+Multi-Chat is a web-based chat application that allows users to communicate in both public chat rooms and private one-on-one conversations. The application uses WebSocket for real-time communication between clients and the server.
+
+Features
+Public Chat Room: Send messages visible to all connected users
+Private Messaging: Send direct messages to specific users
+Real-time Updates: See who's online and receive messages instantly
+Visual Notifications: Get notified when you receive new private messages
+Timestamps: All messages are timestamped
+Responsive UI: Clean, modern interface with support for different screen sizes
+Prerequisites
+Java 21 or higher
+Maven 3.6+ or use the included Maven wrapper
+Modern web browser (Chrome, Firefox, Safari, Edge)
+Running the Application
+Using Maven
+Extract the ZIP file to a location of your choice
+Open a terminal/command prompt and navigate to the extracted project folder
+Run the application using Maven:
+# Using Maven
+mvn spring-boot:run
+
+# Alternatively, using the Maven wrapper
+# On Windows:
+mvnw.cmd spring-boot:run
+
+# On Unix/Linux/macOS:
+./mvnw spring-boot:run
+Once started, the server will be running at http://localhost:8080
+Open a web browser and navigate to http://localhost:8080/chat_index.html
+How to Use
+When you open the application, you'll be prompted to enter your username
+After entering a valid username, you'll join the public chat room
+To send a public message, type in the input field at the bottom of the chat area and press Enter or click Send
+To send a private message:
+Click on a user's name in the "Online Users" list on the left side
+A private chat panel will open
+Type your message and press Enter or click Send
+When you receive private messages while the chat panel is closed, the sender's name will be highlighted in the user list
+Message Format
+Public Messages: Sent to all connected users
+Private Messages: Sent using the format @username message
+System Messages: Automatically sent to notify about users joining or leaving
+Notes
+If you close the browser or refresh the page, you'll need to re-enter your username
+The server automatically removes users when they disconnect
+Usernames must be unique; you'll be prompted to choose another name if yours is already taken
+Troubleshooting
+If you can't connect to the server, make sure port 8080 is not in use by another application
+If messages aren't sending or appearing, check your browser console for any error messages
+If the application doesn't start, verify you have the correct Java version installed
